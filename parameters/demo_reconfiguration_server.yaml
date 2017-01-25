@@ -1,0 +1,22 @@
+
+servers:
+  # a dyn-recfg server definition, this will be started in the reconfiguration server's namespace
+  #   note: the server name is simply a unique key enabling dyn-recfg server management,
+  #         it does not have to related to the dyn-recfg server namespace!
+  bob:
+    module: feed_the_troll.cfg.DemoConfig
+    # namespace is optional....if not set, it will use the key ('bob') and create the dyn-recfg server in the
+    #                          reconfiguration node's private namespace (/reconfiguration/bob)
+    # overrides are optional...if not set, they will default to those in the .cfg files
+
+  # optionally direct the reconfigure server to be somewhere other than the reconfiguration server's private namespace
+  dudette:
+    module: feed_the_troll.cfg.DemoConfig
+    namespace: /foo/troll/dudette
+    # overrides are optional...and can be partial
+    overrides:
+      # int_param: 50
+      double_param: 0.6
+      str_param: Dudette
+      bool_param: False
+      size: 2

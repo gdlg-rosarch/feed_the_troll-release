@@ -1,0 +1,14 @@
+<!--
+  The reconfigurable reconfigure server with a demo feeder.
+ -->
+<launch>
+  <arg name="debug" default="true" doc="enable/disable verbose loading/unloading/updating information"/>
+
+  <include file="$(find feed_the_troll)/launch/demo_reconfiguration_server.launch">
+    <arg name="debug" value="$(arg debug)"/>
+  </include>
+  <include file="$(find feed_the_troll)/launch/demo_reconfiguration_feeder.launch"/>
+  <node pkg="feed_the_troll" name="reconfiguration_client" type="demo_reconfiguration_client.py">
+    <param name="name" value="/foo/troll/dudette"/>
+  </node>
+</launch>

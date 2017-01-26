@@ -1,0 +1,15 @@
+ros-kinetic-feed-the-troll (0.1.1-0jessie) jessie; urgency=high
+
+  * [reconfiguration] clear/reset parameters, not namespace on start server
+  * [feeders] often anon, so clean up private namespace after shutting down
+
+ -- Daniel Stonier <d.stonier@gmail.com>  Tue, 24 Jan 2017 15:00:00 -0000
+
+ros-kinetic-feed-the-troll (0.1.0-0jessie) jessie; urgency=high
+
+  * [reconfiguration] server added w/ demo
+  * [feeder/troll] parameter type added w/ demos
+
+ -- Daniel Stonier <d.stonier@gmail.com>  Thu, 12 Jan 2017 15:00:00 -0000
+
+
